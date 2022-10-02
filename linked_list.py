@@ -64,7 +64,7 @@ class Linked_list:
                 break
             itr = itr.next
             if not itr.next:
-                raise Exception('Value not Found')
+                return
 
     def insert_at(self, index, data):
         if index < 0 or index > self.len():
@@ -98,5 +98,6 @@ class Linked_list:
 if __name__ == '__main__':
     my_linked_list = Linked_list()
     my_linked_list.insert_values([5, 6, 7, 1, 2, 3])
-    my_linked_list.remove_by_value(6)
+    my_linked_list.remove_by_value(0)
     my_linked_list.print()
+    print(my_linked_list.head)
